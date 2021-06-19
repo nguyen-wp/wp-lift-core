@@ -1,0 +1,21 @@
+{
+  "name": "trenews",
+  "description": "Default WP Theme",
+  "main": "",
+  "authors": [
+    "Nguyen Pham <baonguyenyam@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/baonguyenyam/trenews",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "k-sass-core": "^6.0.4",
+    "moment-timezone": "^0.5.25"
+  }
+}

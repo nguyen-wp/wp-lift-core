@@ -1,0 +1,106 @@
+// https://developer.wordpress.org/resource/dashicons/#album
+body #wpadminbar > #wp-toolbar > #wp-admin-bar-root-default #wp-admin-bar-lift_admin_bar_menu,
+body #wpadminbar #wp-admin-bar-lift_admin_bar_menu {
+    a {
+        display: flex;
+        align-items: center;
+        .ab-icon.lifemx {
+            background-image: url(../../img/icon.png) !important;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 16px;
+            width: 16px;
+        }
+    }
+    ul {
+        .ab-item {
+            display: flex;
+            align-items: center;
+            span {
+                line-height: 1;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+.lift-table-admin {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border-spacing: 0;
+    tr {
+        th {
+            background-color: #f0f0f1;
+            &:first-child {
+                width: 20px;
+            }
+        }
+        td,
+        th {
+            padding: 3px 5px;
+            margin: 0;
+            border: 1px solid #dfdfdf;
+            text-align: left;
+        }
+    }
+}
+
+.cf-field__body input[type="checkbox"] {
+    font-size: 1rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 2.5rem;
+    height: 22px;
+    background: #ddd;
+    border-radius: 2.5rem;
+    cursor: pointer;
+    outline: none;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    border: 0!important;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    &:checked {
+        background: #0ebeff;
+    }
+    &:before {
+        display: none;
+    }
+    &:after {
+        position: absolute;
+        content: "";
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: #fff;
+        -webkit-box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.3);
+        box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.3);
+        left: 3px;
+        top: 50%;
+        transform: translateY(-50%);
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+    }
+    &:checked:after {
+        left: calc(100% - 19px);
+    }
+}
+
+.cf-container__tabs {
+    .cf-container__tabs-item {
+        background: #f0f0f1;
+        cursor: pointer;
+        button {
+            cursor: pointer;
+        }
+        &.cf-container__tabs-item--current{
+            background: #f2f2f2;
+            background: linear-gradient(180deg,#f2f2f2 0,#fff);
+        }
+    }
+}

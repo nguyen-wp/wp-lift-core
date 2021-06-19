@@ -1,0 +1,6 @@
+{
+    "require": {
+        "htmlburger/carbon-fields": "^3.3",
+        "redux-framework/redux-framework": "^3.6"
+    }
+}
