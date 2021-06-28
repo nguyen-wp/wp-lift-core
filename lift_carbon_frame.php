@@ -270,6 +270,17 @@ function Lift___script() {
 	);
 	return $data;
 }
+function Lift___seometa() {
+	$data = array();
+	$data = array(
+		// Field::make( 'file', 'crb_file', __( 'File' ) ),
+		Field::make( 'header_scripts', '__lift_seo_meta', __( 'Header SEO Meta tags' ) )
+		->set_rows(40)
+		->set_hook_priority(9999)
+		->set_help_text( 'If you need to add HTML tags to your header, you should enter them here.' )
+	);
+	return $data;
+}
 function Lift___IMGError() {
 	$result = $images_list = '';
 	$query_images_args = array(
@@ -321,6 +332,7 @@ function lift_option_attach_theme_options() {
 		->set_page_menu_position(2)
 		->set_icon( 'dashicons-admin-generic' )
 		->add_tab( __( 'Welcome' ), Lift___menu_welcome() )
+		->add_tab( __( 'SEO Tags' ), Lift___seometa() )
         ->add_tab( __( 'Images' ), array(
 			Field::make( 'html', 'crb_html_1', __( 'Section Description' ) )
 				->set_html('With the LIFT plugin, you can quickly rename all your image URLs based on the post title.'),
