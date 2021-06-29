@@ -276,7 +276,7 @@ function Lift___seometa() {
 		// Field::make( 'file', 'crb_file', __( 'File' ) ),
 		Field::make( 'header_scripts', '__lift_seo_meta', __( 'Header SEO Meta tags' ) )
 		->set_rows(40)
-		->set_hook_priority(9999)
+		->set_hook_priority(-9999)
 		->set_help_text( 'If you need to add HTML tags to your header, you should enter them here.' )
 	);
 	return $data;
