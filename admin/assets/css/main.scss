@@ -104,3 +104,28 @@ body #wpadminbar #wp-admin-bar-lift_admin_bar_menu {
         }
     }
 }
+.carbon-theme-options{
+    .postbox,
+    .postbox-container .postbox {
+        .cf-container__tabs-list {
+            .cf-container__tabs-item {
+                border-radius: .25rem .25rem 0 0;
+                margin: 0 4px 0 0;
+            }
+        }
+    }
+    .postbox,
+    .postbox-container .postbox {
+        border-radius: 10px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0,0,0,.125);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+        overflow: hidden;
+    }
+}

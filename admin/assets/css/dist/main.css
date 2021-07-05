@@ -98,3 +98,23 @@ body #wpadminbar #wp-admin-bar-lift_admin_bar_menu ul .ab-item span {
   background: #f2f2f2;
   background: linear-gradient(180deg, #f2f2f2 0, #fff);
 }
+
+.carbon-theme-options .postbox .cf-container__tabs-list .cf-container__tabs-item,
+.carbon-theme-options .postbox-container .postbox .cf-container__tabs-list .cf-container__tabs-item {
+  border-radius: 0.25rem 0.25rem 0 0;
+  margin: 0 4px 0 0;
+}
+.carbon-theme-options .postbox,
+.carbon-theme-options .postbox-container .postbox {
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  overflow: hidden;
+}
