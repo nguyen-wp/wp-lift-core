@@ -214,17 +214,13 @@ function ___lift_disable_password_reset() {
     }
 }
 
+// ADD SETTING LINK 
+add_filter( 'plugin_action_links',  '__lift_add_setting_link_core', 10, 2 );
 
-// add_filter( 'wp_nav_menu_items', 'lift_add_shortcode_to_menu_items', 10, 2 );
-// function lift_add_shortcode_to_menu_items ( $items, $args ) {
-//     var_dump($items);
-//     // $string = preg_replace("/<a\s(.+?)>(.+?)<\/a>/is", "$2", $items);
-//     // var_dump($string);
-//     // if ( preg_match( '/\[(.+?)]/', $string ) ) {
-//     //   echo(1);
-//         // $newstring = do_shortcode( $string );
-//     // } else {
-//         // $newstring = $items;
-//     // }
-//     return $items;
-// }
+function __lift_add_setting_link_core( $links, $file ) {
+    if( $file === 'wp-lift-core/bn-wp.php' ){
+        $link = '<a href="'.admin_url('admin.php?page=crb_carbon_fields_container_lift_creations.php').'">'.__('Settings', 'bn-wp-core').'</a>';
+        array_unshift( $links, $link ); 
+    }
+    return $links;
+}

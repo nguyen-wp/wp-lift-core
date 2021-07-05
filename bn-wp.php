@@ -16,7 +16,7 @@
  * Plugin Name:       @LIFT Creations - LIFT Core
  * Plugin URI:        https://liftcreations.com
  * Description:       This plugins add new LIFT's menu into Wordpress site.
- * Version:           2.8.0
+ * Version:           2.8.1
  * Author:            Nguyen Pham
  * Author URI:        https://baonguyenyam.github.io/cv
  * License:           GPL-2.0+
