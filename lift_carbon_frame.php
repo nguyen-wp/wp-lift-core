@@ -51,6 +51,11 @@ function Lift_tabCleanUp() {
 				)->set_option_value( 'yes' ),
 				Field::make(
 					'checkbox', 
+					'___lift_remove_gutenberg_editor',
+					__('Disable the Gutenberg Editor')
+					)->set_option_value( 'yes' ),
+				Field::make(
+					'checkbox', 
 					'___lift_remove_admin_bar',
 					__('Remove Admin bar')
 					)->set_option_value( 'yes' ),
@@ -166,6 +171,13 @@ function Lift_tabCleanUp() {
 				'___lift_disable_comments',
 				__('Disable Comments on WordPress')
 				)->set_option_value( 'yes' ),
+			Field::make(
+				'checkbox', 
+				'___lift_remove_gutenberg_editor',
+				__('Disable the Gutenberg Editor')
+				)->set_option_value( 'yes' ),
+			Field::make( 'html', 'crb_html_require', __( 'Section Description' ) )
+				->set_html('<p style="color:red">Please install <b>LIFT CleanUp</b> to get more features...</p>'),
 		);
 	}
 	return $data;
@@ -258,6 +270,12 @@ function Lift___security() {
 			'___lift_disable_password_reset',
 			__('Disable Password Reset')
 			)->set_option_value( 'yes' )->set_help_text('Disable password reset functionality. Only users with administrator role will be able to change passwords from inside admin area.' ),
+		Field::make( 'separator', 'crb_separator_8', __( 'Theme/Plugin Editing' ) ),
+		Field::make(
+			'checkbox', 
+			'___lift_disable_theme_plugin_edit',
+			__('Disable File Editing')
+			)->set_option_value( 'yes' )->set_help_text('When file editing is enabled, Administrator users can edit the code of themes and plugins directly from the WordPress dashboard. This is a potential security risk because not everyone has the skills to write code, and if a hacker breaks in, they would have access to all your data. That\'s why we recommend disabling it.'),
 	);
 	return $data;
 }

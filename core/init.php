@@ -154,6 +154,22 @@ function lift_remove_wp_core_updates(){
 }
 
 
+// Disable the Gutenberg Editor 
+add_action( 'carbon_fields_fields_registered', '___lift_remove_gutenberg_editor' );
+function ___lift_remove_gutenberg_editor() {
+    if(carbon_get_theme_option('___lift_remove_gutenberg_editor')) {
+        add_filter('use_block_editor_for_post', '__return_false');
+    }
+}
+
+// Disable File Editing
+add_action( 'carbon_fields_fields_registered', '___lift_disable_theme_plugin_edit' );
+function ___lift_disable_theme_plugin_edit() {
+    if(carbon_get_theme_option('___lift_disable_theme_plugin_edit')) {
+        define( 'DISALLOW_FILE_EDIT', true );
+    }
+}
+
 // COMMENT 
 add_action( 'carbon_fields_fields_registered', '___lift_disable_comments' );
 function ___lift_disable_comments() {
