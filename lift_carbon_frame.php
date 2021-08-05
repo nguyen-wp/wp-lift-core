@@ -79,6 +79,11 @@ function Lift_tabCleanUp() {
 					'___lift_remove_goto',
 					__('Remove Go to link from Login page')
 					)->set_option_value( 'yes' ),
+				Field::make(
+					'checkbox', 
+					'___lift_disable_widget_block_editor',
+					__('Disable Widget Block Editor')
+					)->set_option_value( 'yes' ),
 				Field::make( 'separator', 'crb_separator_2', __( 'Dashboard' ) ),
 				Field::make(
 					'checkbox', 
